@@ -11,9 +11,9 @@
             {{($disabled) ? 'disabled' : '' }}>
             <label class="custom-file-label" for="{{$id}}">{{$placeholder}}</label>
         </div>
-        <div class="input-group-append">
+        {{-- <div class="input-group-append">
             <span class="input-group-text" id="">Upload</span>
-        </div>
+        </div> --}}
     </div>
     @error($name)
         <span class="invalid-feedback d-block" role="alert">
