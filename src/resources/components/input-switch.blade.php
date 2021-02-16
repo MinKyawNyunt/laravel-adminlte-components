@@ -4,7 +4,8 @@
         id="{{$id}}" name="{{$name}}" 
         {{$checked ? 'checked' : ''}}
         {{$disabled ? 'disabled' : ''}}
-        {{$required ? 'required' : ''}}>
+        {{$required ? 'required' : ''}}
+        {{$attributes}}>
         <label class="custom-control-label" for="{{$id}}">{{$label}}</label>
     </div>
 </div>
