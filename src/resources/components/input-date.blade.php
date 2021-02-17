@@ -5,7 +5,8 @@
     data-toggle="datetimepicker" data-target="#{{$id}}"
     placeholder="{{$placeholder}}" value="{{$value}}"
     {{($required) ? 'required' : '' }}
-    {{($disabled) ? 'disabled' : '' }}/>
+    {{($disabled) ? 'disabled' : '' }}
+    {{$attributes}}/>
 
     @error($name)
         <span class="invalid-feedback" role="alert">
