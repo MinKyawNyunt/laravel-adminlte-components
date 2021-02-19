@@ -1,5 +1,5 @@
-<div class="card card-{{$bg}} 
-        {{$outline ? 'card-outline' : ''}} 
+<div class="card card-{{$bg}}
+        {{$outline ? 'card-outline' : ''}}
         {{$collapsed ? 'collapsed-card' : ''}}
         {{$full ? 'bg-'.$bg : ''}} ">
     <div class="card-header" data-card-widget="collapse">
@@ -35,9 +35,15 @@
         {{$slot}}
     </div>
 
+    @if($loading)
+        <div class="overlay dark">
+            <i class="fas fa-2x fa-sync-alt fa-spin"></i>
+        </div>
+    @endif
+
     @if($disabled)
-    <div class="overlay dark">
-        <i class="fas fa-2x fa-ban"></i>
-    </div>
+        <div class="overlay dark">
+            <i class="fas fa-2x fa-ban"></i>
+        </div>
     @endif
 </div>
