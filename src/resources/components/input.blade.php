@@ -1,7 +1,7 @@
 <div class="form-group {{$topclass}}">
     <label for="{{$id}}">{{$label}}</label>
-    <input type="{{$type}}" class="{{$inputclass}} form-control @error($name) is-invalid @enderror" 
-    id="{{$id}}" name="{{$name}}" placeholder="{{$placeholder}}" 
+    <input type="{{$type}}" class="{{$inputclass}} form-control @error($name) is-invalid @enderror"
+    id="{{$id}}" name="{{$name}}" placeholder="{{$placeholder}}"
     @if(!is_null($step))
     step="{{$step}}"
     @endif
@@ -14,9 +14,10 @@
     @if(!is_null($pattern))
     pattern="{{$pattern}}"
     @endif
-    value="{{$value}}" 
-    {{($required) ? 'required' : '' }} 
-    {{($disabled) ? 'disabled' : '' }}>
+    value="{{$value}}"
+    {{($required) ? 'required' : '' }}
+    {{($disabled) ? 'disabled' : '' }}
+    {{$attributes}}>
 
     @error($name)
         <span class="invalid-feedback" role="alert">
