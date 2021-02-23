@@ -13,7 +13,7 @@ class Input extends Component
 
     public function __construct(
             $type = 'text', $id = null, $name = null,
-            $label = 'Input Label', $placeholder = null,
+            $label = null, $placeholder = null,
             $topclass = null, $inputclass = null,
             $value = null, $disabled = false, $required = false,
             $step = null, $max = null, $maxlength = null, $pattern = null

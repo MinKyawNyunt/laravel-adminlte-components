@@ -1,5 +1,7 @@
 <div class="form-group {{$topclass}}">
-    <label for="{{$id}}">{{$label}}</label>
+    @if($label)
+        <label for="{{$id}}">{{$label}}</label>
+    @endif
     <input type="{{$type}}" class="{{$inputclass}} form-control @error($name) is-invalid @enderror"
     id="{{$id}}" name="{{$name}}" placeholder="{{$placeholder}}"
     @if(!is_null($step))
@@ -14,9 +16,10 @@
     @if(!is_null($pattern))
     pattern="{{$pattern}}"
     @endif
-    value="{{old($name) ?? $value}}"
+    value="{{$value}}"
     {{($required) ? 'required' : '' }}
-    {{($disabled) ? 'disabled' : '' }}>
+    {{($disabled) ? 'disabled' : '' }}
+    {{$attributes}}>
 
     @error($name)
         <span class="invalid-feedback" role="alert">
