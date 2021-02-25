@@ -16,7 +16,7 @@
     @if(!is_null($pattern))
     pattern="{{$pattern}}"
     @endif
-    value="{{$value}}"
+    value="{{old($name) ?? $value}}"
     {{($required) ? 'required' : '' }}
     {{($disabled) ? 'disabled' : '' }}
     {{$attributes}}>
