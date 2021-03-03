@@ -18,6 +18,6 @@
 @section('js')
     @parent
     <script>
-        $(()=>{ $('#{{$id}}').select2()
+        $(()=>{ $('#{{$id}}').select2(); })
     </script>
 @endsection
