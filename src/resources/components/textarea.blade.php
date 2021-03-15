@@ -5,6 +5,7 @@
     placeholder="{{$placeholder}}" 
     {{($required) ? 'required' : '' }}
     {{($disabled) ? 'disabled' : '' }}
+    {{$attributes}}
     >{{$slot}}</textarea>
     @error($name)
         <span class="invalid-feedback" role="alert">
